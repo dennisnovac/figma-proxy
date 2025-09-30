@@ -10,7 +10,7 @@ export default function handler(req, res) {
   }
   
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'apiKey' });
   }
 
   if (!apiKey) {
@@ -24,3 +24,4 @@ export default function handler(req, res) {
     keyStart: apiKey.substring(0, 15)
   });
 }
+
